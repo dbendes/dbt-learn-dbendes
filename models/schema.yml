@@ -34,12 +34,6 @@ models:
   
   - name: stg_order_payments
     description: This model joins orders and payments, with amounts only mattering if there are successes
-    columns:
-      - name: payment_id
-        description: Primary key
-        tests:
-          - unique
-          - not_null
 
 
   - name: stg_orders
