@@ -10,6 +10,11 @@ orders as (
 
 ),
 
+payments as (
+    select * from {{ref('stg_payments')}}
+)
+
+
 customer_orders as (
 
     select
@@ -24,6 +29,7 @@ customer_orders as (
     group by 1
 
 ),
+
 
 
 final as (
