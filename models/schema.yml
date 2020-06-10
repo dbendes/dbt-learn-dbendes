@@ -21,6 +21,21 @@ models:
           - unique
           - not_null
 
+
+  - name: stg_payments
+    description: This model cleans up payment data
+    columns:
+      - name: payment_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+  
+  - name: stg_order_payments
+    description: This model joins orders and payments, with amounts only mattering if there are successes
+
+
   - name: stg_orders
     description: This model cleans up order data
     columns:
